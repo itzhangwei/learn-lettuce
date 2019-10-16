@@ -17,17 +17,22 @@ import java.util.concurrent.*;
 public class LearnFuture {
 	
 	public static void main(String[] args) {
-		System.out.println("-------------------------顺序-----------------------");
-		testFindPrice();
+		Shop shop2 = null;
+		final Shop shop = new Shop();
+		shop2 = shop;
+		System.out.println(shop== shop2);
 		
-		System.out.println("--------------------------并行流----------------------");
-		testFindPriceParallel();
-		
-		System.out.println("------------------------async------------------------");
-		testFindPriceAsync();
-		
-		System.out.println("------------------------async，自己提供合适的线程池------------------------");
-		testFindPriceAsyncWitheThreadPool();
+//		System.out.println("-------------------------顺序-----------------------");
+//		testFindPrice();
+//
+//		System.out.println("--------------------------并行流----------------------");
+//		testFindPriceParallel();
+//
+//		System.out.println("------------------------async------------------------");
+//		testFindPriceAsync();
+//
+//		System.out.println("------------------------async，自己提供合适的线程池------------------------");
+//		testFindPriceAsyncWitheThreadPool();
 	}
 	
 	/**
